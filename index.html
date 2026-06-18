@@ -44,13 +44,16 @@
 
       main {
         display: grid;
+        position: relative;
         min-height: 100svh;
         padding: clamp(1.5rem, 4vw, 4rem);
       }
 
       .hero {
-        align-self: end;
-        max-width: 760px;
+        position: absolute;
+        left: clamp(1.5rem, 4vw, 4rem);
+        bottom: clamp(1.5rem, 4vw, 4rem);
+        max-width: min(34rem, calc(100% - clamp(3rem, 8vw, 8rem)));
         text-shadow: 0 0.25rem 1.75rem var(--shadow);
       }
 
@@ -75,9 +78,9 @@
 
       h1 {
         margin: 0;
-        font-size: clamp(3.5rem, 13vw, 10.5rem);
-        line-height: 0.86;
-        letter-spacing: -0.08em;
+        font-size: clamp(1.25rem, 3vw, 2.35rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
         text-transform: uppercase;
       }
 
@@ -127,8 +130,9 @@
       }
 
       footer {
-        align-self: end;
-        justify-self: end;
+        position: absolute;
+        right: clamp(1.5rem, 4vw, 4rem);
+        bottom: clamp(1.5rem, 4vw, 4rem);
         color: rgba(255, 247, 238, 0.56);
         font-size: 0.8rem;
         letter-spacing: 0.08em;
@@ -147,7 +151,7 @@
         }
 
         footer {
-          justify-self: start;
+          display: none;
         }
       }
     </style>
