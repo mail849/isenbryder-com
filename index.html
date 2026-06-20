@@ -15,10 +15,9 @@
     <style>
       :root {
         color-scheme: dark;
-        --text: #fff7ee;
-        --muted: rgba(255, 247, 238, 0.74);
-        --line: rgba(255, 247, 238, 0.32);
-        --shadow: rgba(0, 0, 0, 0.62);
+        --text: #fff7cc;
+        --link: #8fd7ff;
+        --shadow: rgba(0, 0, 0, 0.82);
       }
 
       * {
@@ -32,192 +31,128 @@
 
       body {
         margin: 0;
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
+        font-family: "Times New Roman", Times, serif;
         color: var(--text);
         background:
-          linear-gradient(90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.24)),
-          linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.16)),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
           url("Artwork_Vi løber_photo_KasparVig.jpg") center / cover no-repeat fixed;
       }
 
       main {
-        display: grid;
         position: relative;
         min-height: 100svh;
-        padding: clamp(1.5rem, 4vw, 4rem);
+        padding: 24px;
       }
 
       .hero {
         position: absolute;
-        left: clamp(1.5rem, 4vw, 4rem);
-        top: clamp(1.5rem, 4vw, 4rem);
-        max-width: min(54rem, calc(100% - clamp(3rem, 8vw, 8rem)));
-        text-shadow: 0 0.25rem 1.75rem var(--shadow);
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        gap: 0.75rem;
-        align-items: center;
-        margin: 0 0 1.25rem;
-        color: var(--muted);
-        font-size: clamp(0.78rem, 1.4vw, 0.95rem);
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        width: 3.25rem;
-        height: 1px;
-        background: var(--line);
-        content: "";
+        left: 24px;
+        top: 24px;
+        max-width: 680px;
+        text-shadow:
+          2px 2px 0 #000,
+          0 0 14px var(--shadow);
       }
 
       h1 {
         position: absolute;
-        left: clamp(1.5rem, 4vw, 4rem);
-        bottom: clamp(1.5rem, 4vw, 4rem);
-        max-width: min(34rem, calc(100% - clamp(3rem, 8vw, 8rem)));
+        left: 24px;
+        bottom: 24px;
         margin: 0;
-        font-size: clamp(1.06rem, 2.55vw, 2rem);
-        line-height: 0.95;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-        text-shadow: 0 0.25rem 1.75rem var(--shadow);
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1.1;
+        text-shadow:
+          2px 2px 0 #000,
+          0 0 12px var(--shadow);
       }
 
       p {
-        max-width: 52rem;
         margin: 0;
         color: var(--text);
-        font-size: clamp(1.57rem, 4.42vw, 3.95rem);
-        font-weight: 750;
-        letter-spacing: -0.03em;
+        font-size: 34px;
+        font-weight: normal;
         line-height: 1.12;
       }
 
       p a {
         display: inline-block;
-        margin-top: 0.12em;
-        text-decoration-thickness: 0.08em;
-        text-underline-offset: 0.12em;
+        margin-top: 0.16em;
+        color: var(--link);
+        text-decoration: underline;
       }
 
       .pre-save {
         display: block;
-        margin-top: 0.16em;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        margin-top: 2rem;
+        margin-top: 0.4em;
       }
 
       a {
-        color: inherit;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 3rem;
-        padding: 0.85rem 1.15rem;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.22);
-        backdrop-filter: blur(10px);
-        font-size: 0.85rem;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition:
-          background 180ms ease,
-          transform 180ms ease;
-      }
-
-      .button:hover,
-      .button:focus-visible {
-        background: rgba(255, 247, 238, 0.16);
-        transform: translateY(-2px);
+        color: var(--link);
       }
 
       @media (max-width: 700px) {
         body {
           background:
-            linear-gradient(0deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.2)),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.14)),
             url("Artwork_Vi løber_photo_KasparVig.jpg") center / cover no-repeat;
         }
 
         main {
           min-height: 100dvh;
-          padding: 1rem;
+          padding: 14px;
         }
 
         .hero {
-          left: 1rem;
-          right: 1rem;
-          top: 1rem;
+          left: 14px;
+          right: 14px;
+          top: 14px;
           max-width: none;
         }
 
         p {
-          max-width: 100%;
-          font-size: clamp(1rem, 5vw, 1.25rem);
-          letter-spacing: -0.015em;
-          line-height: 1.18;
+          font-size: 22px;
+          line-height: 1.14;
         }
 
         p a {
           display: block;
-          margin-top: 0.3em;
-          width: max-content;
-          max-width: 100%;
-          font-size: 0.78em;
-          white-space: nowrap;
+          overflow-wrap: anywhere;
+          font-size: 19px;
         }
 
         h1 {
-          left: 1rem;
-          right: 1rem;
+          left: 14px;
+          right: 14px;
           bottom: calc(1rem + env(safe-area-inset-bottom));
-          max-width: none;
-          font-size: clamp(0.95rem, 4.4vw, 1.18rem);
-          line-height: 1;
-          letter-spacing: 0.005em;
+          font-size: 18px;
         }
       }
 
       @media (orientation: portrait) and (max-width: 1100px) {
         body {
           background:
-            linear-gradient(0deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.18)),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.14)),
             url("Artwork_Vi løber_photo_KasparVig.jpg") center / cover no-repeat;
         }
 
         main {
           min-height: 100dvh;
-          padding: clamp(1.25rem, 5vw, 4rem);
+          padding: 18px;
         }
 
         .hero {
-          left: clamp(1.25rem, 5vw, 4rem);
-          right: clamp(1.25rem, 5vw, 4rem);
-          top: 42vh;
+          left: 18px;
+          right: 18px;
+          top: 38vh;
           max-width: none;
         }
 
         p {
-          max-width: 11em;
-          font-size: clamp(1.2rem, 4.8vw, 3rem);
-          letter-spacing: -0.018em;
-          line-height: 1.16;
+          max-width: 12em;
+          font-size: 28px;
+          line-height: 1.12;
         }
 
         .pre-save {
@@ -226,20 +161,17 @@
 
         p a {
           display: block;
-          margin-top: 0.28em;
-          width: max-content;
+          margin-top: 0.32em;
           max-width: 100%;
-          font-size: 0.72em;
-          white-space: nowrap;
+          font-size: 21px;
+          overflow-wrap: anywhere;
         }
 
         h1 {
-          left: clamp(1.25rem, 5vw, 4rem);
-          right: clamp(1.25rem, 5vw, 4rem);
-          bottom: calc(clamp(1.25rem, 5vw, 4rem) + env(safe-area-inset-bottom));
-          max-width: none;
-          font-size: clamp(1rem, 3.1vw, 2.1rem);
-          letter-spacing: 0.01em;
+          left: 18px;
+          right: 18px;
+          bottom: calc(18px + env(safe-area-inset-bottom));
+          font-size: 21px;
         }
       }
     </style>
@@ -249,8 +181,8 @@
       <section class="hero" aria-label="Forside">
         <p>
           Cæcilie Balling - Vi løber<br />
-          Udkommer 26.06.26
-          <span class="pre-save">pre save her:</span>
+          udkommer 26.06.26
+          <span class="pre-save">pre-save:</span>
           <a href="https://bfan.link/vi-lober">https://bfan.link/vi-lober</a>
         </p>
       </section>
